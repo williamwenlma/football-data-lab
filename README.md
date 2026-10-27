@@ -1,8 +1,12 @@
 # Football Data Lab
 
+[简体中文](README.md) | [English](README.en.md)
+
 两个可复现的足球数据分析案例：**U19 球员出生月份分布**与**世界杯球员样本对比**。
 
-An independent football analytics portfolio with two dependency-free dashboards, traceable local data snapshots, reproducible aggregations and CSV exports.
+项目包含两个无第三方运行依赖的交互看板、可追溯的数据快照、可复现的汇总脚本和 CSV 导出。
+
+源码仓库：[williamwenlma/football-data-lab](https://github.com/williamwenlma/football-data-lab)。
 
 ## 分析案例
 
@@ -82,7 +86,7 @@ docs/images/          页面预览图
 
 ## 发布与后续改进
 
-站点使用相对路径，可在 GitHub Pages 项目子路径下运行。仓库上传后，按 [发布说明](docs/PUBLISHING.md) 配置静态托管。
+站点使用相对路径，可在 GitHub Pages 项目子路径下运行。源码已发布到 GitHub；可按 [发布说明](docs/PUBLISHING.md) 配置静态托管。
 
 当前版本没有在线爬虫、实时更新任务、机器学习模型或比赛预测功能。后续可增加采集脚本、字段级线上复核、更多样本与球队分析。
 
