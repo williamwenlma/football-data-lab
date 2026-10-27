@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>2025 UEFA U19 Player Birth Month Distribution</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main id="u19-country-birth-report">
+    <nav class="repo-nav" aria-label="Project navigation"><a href="../../">Football Data Lab</a><a href="../world-cup/">World Cup case</a><a href="../../data/csv/u19-monthly.csv" download>Download CSV</a></nav>
+    <header class="report-head">
+      <div class="title-group">
+        <h1>2025 UEFA U19 Player Birth Month Distribution</h1>
+      </div>
+      <label class="country-field" for="u19-country-select">
+        Country
+        <span class="select-wrap">
+          <select id="u19-country-select">
+            <option value="All countries">All countries</option>
+            <option value="Denmark">Denmark</option>
+            <option value="England">England</option>
+            <option value="Germany">Germany</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Spain">Spain</option>
+          </select>
+        </span>
+      </label>
+    </header>
+
+    <section class="summary-rail" aria-label="Selection summary">
+      <div class="metric">
+        <strong class="metric-value" data-total>182</strong>
+        <span class="metric-label">players</span>
+      </div>
+      <div class="metric metric--peak">
+        <span class="metric-label">Peak month</span>
+        <strong class="metric-value" data-peak-month>Jan</strong>
+      </div>
+      <div class="metric">
+        <strong class="metric-value" data-peak-count>33</strong>
+        <span class="metric-label">players</span>
+      </div>
+    </section>
+
+    <p class="sr-only" data-live-summary aria-live="polite"></p>
+    <section class="chart-region" aria-label="Birth month chart">
+      <p class="chart-kicker">Players</p>
+      <div class="chart-shell">
+        <svg class="month-chart" role="img" aria-labelledby="u19-month-title u19-month-desc"></svg>
+        <div class="chart-tooltip" role="tooltip"></div>
+      </div>
+    </section>
+    <p class="source-note">Source: qualifying-phase squads in UEFA's <a href="https://editorial.uefa.com/resources/029a-1df9fcba9b73-1eef3cfac692-1000/2025_u19_tournament_final.pdf" target="_blank" rel="noopener">2025 U19 Final Tournament Press Kit</a>, pp. 9, 13, 17, 21, 25, 29, 35. Includes 182 dated records from seven qualifying squads, not the final tournament rosters. Romania is excluded because the relevant pages provide no dated qualifying squad table.</p>
+  </main>
+
+  <script src="../../data/derived/u19-months.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

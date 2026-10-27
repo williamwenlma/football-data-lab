@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="两个可复现的足球数据分析案例：U19 球员出生月份分布与世界杯球员样本对比。">
+  <title>Football Data Lab · 足球数据分析</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./site.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">FOOTBALL DATA LAB</p>
+      <h1>用数据，观察足球。</h1>
+      <p class="intro">两个独立分析案例。从原始记录出发，保留样本范围、计算过程和可以复用的数据。</p>
+    </header>
+    <section class="cases" aria-label="分析案例">
+      <article class="case">
+        <p class="case-number">01 / PLAYER DEVELOPMENT</p>
+        <h2>U19 球员出生月份</h2>
+        <p>2025 UEFA U19 新闻资料中的预选赛阵容记录。按国家切换，观察出生月份分布。</p>
+        <p class="scope">182 条记录 · 7 个国家 · 12 个月份</p>
+        <a class="case-link" href="./cases/u19/">查看出生月份分析 <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="case">
+        <p class="case-number">02 / TOURNAMENT PERFORMANCE</p>
+        <h2>世界杯球员样本对比</h2>
+        <p>连接进攻、传球和跑动统计，比较原项目选定的 12 名球员，查看各项已收录指标。</p>
+        <p class="scope">12 名球员 · 10 个国家 · 本地数据快照</p>
+        <a class="case-link" href="./cases/world-cup/">查看世界杯数据 <span aria-hidden="true">↗</span></a>
+      </article>
+    </section>
+    <section class="notes" aria-label="数据与使用方式">
+      <div><h2>可以追溯的数据</h2><p>U19 图表由逐条生日记录汇总；世界杯指标由保存的分类统计表连接生成。缺失值保留为缺失，不填成零。</p></div>
+      <div><h2>可以复现的过程</h2><p>页面使用原生 HTML、CSS 与 JavaScript。用 Node.js 重新生成图表数据和 CSV，无需 API 密钥或前端依赖。</p></div>
+    </section>
+    <footer>
+      <p>数据来自 UEFA 资料与原项目标注的 FIFA 本地快照。样本与核验范围详见数据说明。</p>
+      <nav aria-label="项目文档"><a href="./README.md">README</a><a href="./DATA_SOURCES.md">数据来源与口径</a><a href="./data/csv/u19-monthly.csv" download>U19 汇总 CSV</a><a href="./data/csv/world-cup-cohort.csv" download>世界杯样本 CSV</a></nav>
+    </footer>
+  </main>
+</body>
+</html>

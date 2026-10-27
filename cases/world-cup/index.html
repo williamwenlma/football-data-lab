@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>世界杯球员样本对比 · Football Data Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="repo-nav" aria-label="项目导航"><a href="../../">Football Data Lab</a><a href="../u19/">U19 出生月份</a><a href="../../data/csv/world-cup-cohort.csv" download>下载样本 CSV</a></nav>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="club-crest sample-badge" aria-hidden="true">WC26</div>
+        <div>
+          <div class="eyebrow">Player sample · World Cup 2026</div>
+          <h1>世界杯球员样本对比</h1>
+          <p class="subtitle">对比原项目选定的 12 名球员，探索进攻、传球、跑动与门将数据。切换指标或选择球员查看本地快照。</p>
+          <div class="madrid-line">Local data snapshot</div>
+        </div>
+      </div>
+      <div class="source"><strong>本地快照 · 原项目标注 2026-07-20</strong>来源标注：FIFA Player Statistics<br>非实时数据；未逐项在线复核</div>
+    </header>
+
+    <section class="kpis" aria-label="关键数据">
+      <article class="card kpi" style="--accent: var(--gold)"><div class="kpi-label">数据覆盖球员</div><div class="kpi-value" id="sample-size">—</div><div class="kpi-note" id="sample-coverage">加载中</div></article>
+      <article class="card kpi" style="--accent: var(--blue)"><div class="kpi-label">已收录进球</div><div class="kpi-value" id="goal-total">—</div><div class="kpi-note" id="goal-coverage"></div></article>
+      <article class="card kpi" style="--accent: var(--cyan)"><div class="kpi-label">已收录助攻</div><div class="kpi-value" id="assist-total">—</div><div class="kpi-note" id="assist-coverage"></div></article>
+      <article class="card kpi" style="--accent: var(--danger)"><div class="kpi-label">国家覆盖</div><div class="kpi-value" id="country-count">—</div><div class="kpi-note">固定样本，非完整赛事名单</div></article>
+    </section>
+
+    <div class="dashboard">
+      <section class="card section pitch-section">
+        <div class="section-head">
+          <div><h2>球员横向比较</h2><div class="section-note" id="metric-note">世界杯进球数</div></div>
+          <div class="filters" role="group" aria-label="选择比较指标">
+            <button class="seg active" data-metric="goals">进球</button>
+            <button class="seg" data-metric="assists">助攻</button>
+            <button class="seg" data-metric="passAccuracy">传球成功率</button>
+            <button class="seg" data-metric="speed">最高时速</button>
+          </div>
+        </div>
+        <div id="chart" class="chart" role="img" aria-label="球员指标横向条形图"></div>
+      </section>
+
+      <aside class="card section player-panel">
+        <div class="section-head"><div><h2>球员聚焦</h2><div class="section-note">选择球员查看核心数据</div></div></div>
+        <label for="player-select" class="section-note">球员</label>
+        <select id="player-select" class="player-select"></select>
+        <div id="profile" class="profile"></div>
+      </aside>
+    </div>
+
+    <section class="card section table-card">
+      <div class="section-head"><div><h2>完整数据表</h2><div class="section-note">“—”表示本地快照未收录该字段，不等同于零</div></div></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="球员数据表，可横向滚动">
+        <table>
+          <thead><tr><th>球员</th><th>金靴榜</th><th>进球</th><th>助攻</th><th>出场分钟</th><th>射门</th><th>xG</th><th>传球成功率</th><th>最高时速</th><th>冲刺</th></tr></thead>
+          <tbody id="players-table"></tbody>
+        </table>
+      </div>
+      <div class="footer">样本沿用原项目选择，不代表任何俱乐部的现役阵容。来源、缺失值与快照口径见 <a href="../../DATA_SOURCES.md">数据说明</a>。</div>
+    </section>
+  </main>
+
+  <script src="../../data/derived/world-cup-players.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

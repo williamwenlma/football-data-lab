@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.codex/
+.agents/
+work/
+tmp/
+*.zip
+*.pdf
+*.xlsx

@@ -1,0 +1,98 @@
+{
+  "sources": [
+    {
+      "path": "data/raw/fifa/players/Attacking.json",
+      "sha256": "b1f2bf77199039447bcade5e6773063a9b2f42fd431afcf5bb83d4f379225f22"
+    },
+    {
+      "path": "data/raw/fifa/players/Defending.json",
+      "sha256": "be98cf2b6f7184dbda805447acfc4feb1652033ec233423d99edf1f0fc283ff2"
+    },
+    {
+      "path": "data/raw/fifa/players/Discipline.json",
+      "sha256": "f0f9e2b1f95ead6bfac0d2e5c5302e4470ab6bfe8eeb6612bde2a1699e891942"
+    },
+    {
+      "path": "data/raw/fifa/players/Distribution.json",
+      "sha256": "9a2e0db11bf882045717e52758b3e5811c9c53c686cff5f5e285e98ed9af4c51"
+    },
+    {
+      "path": "data/raw/fifa/players/Goalkeeping.json",
+      "sha256": "0f0173d59b08d0997fdb6e46d5f66872b123e0b58e475e252206465e00f3be03"
+    },
+    {
+      "path": "data/raw/fifa/players/Movement.json",
+      "sha256": "01840d459e5f805ba9017d7e35d202b3a8fde9898a94e39a50ad64cb30221962"
+    },
+    {
+      "path": "data/raw/fifa/players/Physical.json",
+      "sha256": "51b454f5cff2b686b77776154cecc855cd9d9959db040a0ff0ede0d6cf189442"
+    },
+    {
+      "path": "data/raw/fifa/players/adidas Golden Boot.json",
+      "sha256": "781d7db73e579d23d7d7720f4ef1255d86abed3b610ed9834b36e717f0751682"
+    },
+    {
+      "path": "data/raw/fifa/teams/Attacking.json",
+      "sha256": "4b12d2a31489eab2afb6307763d904d23111a6f2afb043f14909f8fa181014cb"
+    },
+    {
+      "path": "data/raw/fifa/teams/Defending.json",
+      "sha256": "a6f6ebbb2a12551430aa9b49fbeb35982cbab40f620b6159d55cecffc7e38c38"
+    },
+    {
+      "path": "data/raw/fifa/teams/Discipline.json",
+      "sha256": "7158f5794e6f6c7a8b95519803ab6b8b62464133ae2e9708b74bf84ea1b77419"
+    },
+    {
+      "path": "data/raw/fifa/teams/Distribution.json",
+      "sha256": "844da11a8a63b6f6fa21b9381ca997aa3e8f027b433b23de615e96a3187d4e5c"
+    },
+    {
+      "path": "data/raw/fifa/teams/Goalkeeping.json",
+      "sha256": "edcafd268a09a00d29e00c374232291eeb8873cdbf7e69877c9f8099e669f8c4"
+    },
+    {
+      "path": "data/raw/fifa/teams/Movement.json",
+      "sha256": "5aa6c1560d8ab426e40ebb23febee90c322419fea821246baa1dd57757944d6e"
+    },
+    {
+      "path": "data/raw/fifa/teams/Physical.json",
+      "sha256": "ffa85a49f00d88c05370655356f8fced9add3de002f66e89157a79260a3df68b"
+    },
+    {
+      "path": "data/raw/fifa/teams/_metadata.json",
+      "sha256": "fb1fa78850fa775b3bedc2a21a4fe163f39431dca7469817bd76c9c2b9e457b4"
+    },
+    {
+      "path": "data/raw/u19-players.csv",
+      "sha256": "76580c090097b8b2801260bdae37b49b4cc49234f5b4606411d30140b3ae5630"
+    },
+    {
+      "path": "data/raw/world-cup-cohort.json",
+      "sha256": "69255f584b4e89010aa6617087c3a0225cb2eb9b9af1a68fa5a1fe7d51b2f132"
+    }
+  ],
+  "rows": {
+    "u19": 182,
+    "fifaPlayers": {
+      "Attacking": 280,
+      "Defending": 280,
+      "Discipline": 50,
+      "Distribution": 280,
+      "Goalkeeping": 145,
+      "Movement": 50,
+      "Physical": 280,
+      "adidas Golden Boot": 280
+    },
+    "fifaTeams": {
+      "Attacking": 48,
+      "Defending": 48,
+      "Discipline": 48,
+      "Distribution": 48,
+      "Goalkeeping": 48,
+      "Movement": 48,
+      "Physical": 48
+    }
+  }
+}
