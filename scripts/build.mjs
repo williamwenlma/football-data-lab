@@ -20,6 +20,11 @@ for (const [country, counts] of Object.entries(u19.countries)) counts.forEach((c
 outputs.set('data/csv/u19-monthly.csv', toCSV(months));
 const headers = Object.keys(wc.players[0]);
 outputs.set('data/csv/world-cup-cohort.csv', toCSV([headers, ...wc.players.map(player => headers.map(key => player[key]))]));
+const countryNames = { FRA: 'France', ENG: 'England', BRA: 'Brazil', TUR: 'Türkiye', MAR: 'Morocco', NED: 'Netherlands', ESP: 'Spain', GER: 'Germany', BEL: 'Belgium', URU: 'Uruguay' };
+const positionNames = { '前锋': 'Forward', '中场': 'Midfielder', '后卫': 'Defender', '门将': 'Goalkeeper' };
+const englishHeaders = headers.filter(key => key !== 'zh');
+const englishPlayers = wc.players.map(player => ({ ...player, country: countryNames[player.countryCode], pos: positionNames[player.pos] }));
+outputs.set('data/csv/world-cup-cohort.en.csv', toCSV([englishHeaders, ...englishPlayers.map(player => englishHeaders.map(key => player[key]))]));
 for (const [group, tables] of Object.entries({ players: playerTables, teams: teamTables })) {
   for (const [category, table] of Object.entries(tables)) outputs.set(`data/csv/fifa-${group}-${category.toLowerCase().replaceAll(' ', '-')}.csv`, toCSV(table));
 }

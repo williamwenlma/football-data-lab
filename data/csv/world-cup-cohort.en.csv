@@ -1,0 +1,13 @@
+name,countryCode,country,pos,rank,goals,assists,minutes,shots,xg,passAccuracy,speed,sprints,saves
+Kylian Mbappe,FRA,France,Forward,1,10,4,769,41,6.54,87,37.61,250,
+Jude Bellingham,ENG,England,Midfielder,3,7,1,698,19,3.92,83,,,
+Vinicius Junior,BRA,Brazil,Forward,10,4,1,505,17,3.24,82,34.14,253,
+Arda Guler,TUR,Türkiye,Forward,153,1,0,313,,,86,,,
+Brahim Diaz,MAR,Morocco,Forward,181,0,4,500,6,0.31,86,33.07,225,
+Denzel Dumfries,NED,Netherlands,Defender,191,0,2,432,5,0.44,82,34.35,183,
+Marc Cucurella,ESP,Spain,Defender,194,0,2,857,5,0.35,91,33.33,363,
+Aurelien Tchouameni,FRA,France,Midfielder,259,0,1,407,3,0.11,94,,,
+Antonio Ruediger,GER,Germany,Defender,,,,,,,93,33.14,72,
+Thibaut Courtois,BEL,Belgium,Goalkeeper,,,,,,,73,,,17
+Federico Valverde,URU,Uruguay,Midfielder,,,,,,,,34.86,99,
+Endrick,BRA,Brazil,Forward,,,,,,,,33.93,57,

@@ -22,9 +22,11 @@ These are **qualifying-phase squad records**, not final tournament rosters. Roma
 
 This case study retains the original project's selection of 12 players. It joins locally saved FIFA statistical tables by player name to display goals, assists, passing accuracy, top speed, and individual player profiles.
 
+The dashboard is available in [English](cases/world-cup/index.en.html) and [Chinese](cases/world-cup/index.html), with a language switch on each page. The English view translates player labels, countries, positions, metrics, table headings and data notes. It also provides an [English sample CSV](data/csv/world-cup-cohort.en.csv). Both views use the same underlying statistics.
+
 The sample covers 10 countries and four position groups. **It does not represent any club's current squad.** The original project labels the player snapshot date as July 20, 2026. These are not live data, and the saved values have not been independently checked online field by field. Each category table covers only part of the player population. Missing values remain `null`, appear as `—` in the dashboard, and are not replaced with zero. Aggregates also display the number of players with available data.
 
-![World Cup player comparison dashboard](docs/images/world-cup-desktop.png)
+![English World Cup player comparison dashboard](docs/images/world-cup-desktop.en.png)
 
 ## Run locally
 
@@ -35,6 +37,8 @@ npm start
 ```
 
 Open <http://127.0.0.1:4173/> and choose a case study from the home page.
+
+For the English World Cup dashboard, open <http://127.0.0.1:4173/cases/world-cup/index.en.html> after starting the server. Links to HTML files on GitHub display their source; use the local server to run the interactive page.
 
 ```sh
 npm run build   # Rebuild dashboard data and CSV exports from raw data

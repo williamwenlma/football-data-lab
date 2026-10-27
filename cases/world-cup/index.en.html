@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup Player Comparison · Football Data Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="repo-nav" aria-label="Project navigation"><a href="../../">Football Data Lab</a><a href="../u19/">U19 birth months</a><a href="../../data/csv/world-cup-cohort.en.csv" download>Download sample CSV</a><a class="language-switch" href="./index.html" lang="zh-CN" hreflang="zh-CN">Chinese</a></nav>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="club-crest sample-badge" aria-hidden="true">WC26</div>
+        <div>
+          <div class="eyebrow">Player sample · World Cup 2026</div>
+          <h1>World Cup Player Comparison</h1>
+          <p class="subtitle">Explore attacking, passing, movement and goalkeeper statistics for the original 12-player sample. Switch metrics or select a player to inspect the saved data.</p>
+          <div class="madrid-line">Local data snapshot</div>
+        </div>
+      </div>
+      <div class="source"><strong>Local snapshot · labeled July 20, 2026</strong>Attributed source: FIFA Player Statistics<br>Not live; values not individually verified online</div>
+    </header>
+
+    <section class="kpis" aria-label="Sample overview">
+      <article class="card kpi" style="--accent: var(--gold)"><div class="kpi-label">Players in sample</div><div class="kpi-value" id="sample-size">—</div><div class="kpi-note" id="sample-coverage">Loading</div></article>
+      <article class="card kpi" style="--accent: var(--blue)"><div class="kpi-label">Recorded goals</div><div class="kpi-value" id="goal-total">—</div><div class="kpi-note" id="goal-coverage"></div></article>
+      <article class="card kpi" style="--accent: var(--cyan)"><div class="kpi-label">Recorded assists</div><div class="kpi-value" id="assist-total">—</div><div class="kpi-note" id="assist-coverage"></div></article>
+      <article class="card kpi" style="--accent: var(--danger)"><div class="kpi-label">Countries represented</div><div class="kpi-value" id="country-count">—</div><div class="kpi-note">Selected sample, not the full tournament roster</div></article>
+    </section>
+
+    <div class="dashboard">
+      <section class="card section pitch-section">
+        <div class="section-head">
+          <div><h2>Player comparison</h2><div class="section-note" id="metric-note">World Cup goals</div></div>
+          <div class="filters" role="group" aria-label="Select a comparison metric">
+            <button class="seg active" data-metric="goals">Goals</button>
+            <button class="seg" data-metric="assists">Assists</button>
+            <button class="seg" data-metric="passAccuracy">Pass accuracy</button>
+            <button class="seg" data-metric="speed">Top speed</button>
+          </div>
+        </div>
+        <div id="chart" class="chart" role="img" aria-label="Horizontal bar chart comparing player statistics"></div>
+      </section>
+
+      <aside class="card section player-panel">
+        <div class="section-head"><div><h2>Player spotlight</h2><div class="section-note">Select a player to explore their statistics</div></div></div>
+        <label for="player-select" class="section-note">Player</label>
+        <select id="player-select" class="player-select"></select>
+        <div id="profile" class="profile"></div>
+      </aside>
+    </div>
+
+    <section class="card section table-card">
+      <div class="section-head"><div><h2>Full data table</h2><div class="section-note">“—” means the field is missing from the saved tables, not zero</div></div></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Player data table; scroll horizontally to view all columns">
+        <table>
+          <thead><tr><th>Player</th><th>Golden Boot rank</th><th>Goals</th><th>Assists</th><th>Minutes played</th><th>Shots</th><th>xG</th><th>Pass accuracy</th><th>Top speed (km/h)</th><th>Sprints</th></tr></thead>
+          <tbody id="players-table"></tbody>
+        </table>
+      </div>
+      <div class="footer">The sample follows the original selection and does not represent any club’s current squad. See <a href="../../DATA_SOURCES.md">data notes (Chinese)</a> for sources, missing values and snapshot coverage.</div>
+    </section>
+  </main>
+
+  <script src="../../data/derived/world-cup-players.js"></script>
+  <script src="./app.en.js"></script>
+</body>
+</html>
